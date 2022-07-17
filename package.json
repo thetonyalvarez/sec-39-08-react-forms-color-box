@@ -1,12 +1,15 @@
 {
-  "name": "react-forms-color-box",
+	"name": "react-forms-todos",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "main": "postcss.config.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "@emotion/react": "^11.9.3",
@@ -32,7 +35,6 @@
     "vite": "^3.0.0",
     "vitest": "^0.18.1"
   },
-  "main": "postcss.config.js",
   "author": "",
   "license": "ISC",
   "description": ""
