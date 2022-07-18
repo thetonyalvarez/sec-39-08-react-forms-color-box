@@ -15,6 +15,7 @@ const Box = ({ id, bgColor = 'red', width = 100, height = 100, handleRemove }) =
         width: width + 'px',
         height: height + 'px'
       }}
+      data-testid="box"
     >
       <Button onClick={remove}>X</Button>
     </BoxUI>
