@@ -21,6 +21,9 @@ function App() {
         <Typography variant="h1" component="h1">
           Color Box
         </Typography>
+        <Typography variant="p" component="subtitle">
+          Pick a color, width, and height, and add a new box!
+        </Typography>
       </header>
       <main>
         <BoxList></BoxList>

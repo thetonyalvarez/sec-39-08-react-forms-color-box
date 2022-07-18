@@ -4,6 +4,7 @@ import Box from './Box'
 import NewBoxForm from './NewBoxForm'
 import { Box as BoxUI } from '@mui/material'
 import Container from '@mui/material/Container'
+import Grid from '@mui/material/Grid'
 import './BoxList.css'
 
 
@@ -27,7 +28,7 @@ const BoxList = () => {
   // render all boxes
   const renderBoxes = () => {
     return (
-      <BoxUI>
+      <BoxUI className="BoxGrid">
         {boxes.map(box => (
           <Box
             key={box.id}

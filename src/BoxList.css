@@ -1,0 +1,9 @@
+.BoxList {
+  max-width: 600px !important;
+  margin: auto;
+}
+
+.BoxGrid .Box {
+  display: inline-block;
+  margin: 8px;
+}
