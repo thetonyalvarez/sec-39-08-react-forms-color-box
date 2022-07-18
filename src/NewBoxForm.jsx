@@ -56,9 +56,14 @@ const NewBoxForm = ({ addBox }) => {
       height: ""
     },
     validationSchema: validationSchema,
-    onSubmit: (values) => {
+    onSubmit: (values, { resetForm }) => {
       addBox(values);
-      setFormData(INITIAL_STATE);
+      resetForm({
+        bgColor: "", 
+        width: "",
+        height: ""
+      },
+      formik.values.bgColor)
     }
   })
 
