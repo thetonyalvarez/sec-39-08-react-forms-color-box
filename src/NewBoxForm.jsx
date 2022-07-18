@@ -67,9 +67,12 @@ const NewBoxForm = ({ addBox }) => {
     <BoxUI 
       component="form"
       autoComplete="off"
+      sx={{ mb: 4 }}
       onSubmit={formik.handleSubmit}
     >
       <Autocomplete
+        className="ColorField"
+        sx={{ py: 2 }}
         options={colors}
         id="bgColor"
         onChange={formik.handleChange}
@@ -87,26 +90,28 @@ const NewBoxForm = ({ addBox }) => {
             error={formik.touched.bgColor && Boolean(formik.errors.bgColor)}
           />}
       />
-      <TextField
-        id="width"
-        label="Width"
-        variant="outlined"
-        value={formik.values.width}
-        onChange={formik.handleChange}
-        error={formik.touched.width && Boolean(formik.errors.width)}
-        helperText={formik.touched.width && formik.errors.width}
-      />
-      <TextField
-        id="height"
-        label="Height"
-        variant="outlined"
-        value={formik.values.height}
-        onChange={formik.handleChange}
-        error={formik.touched.height && Boolean(formik.errors.height)}
-        helperText={formik.touched.height && formik.errors.height}
-      />
+      <BoxUI className="form-group">
+        <TextField
+          id="width"
+          label="Width"
+          variant="outlined"
+          value={formik.values.width}
+          onChange={formik.handleChange}
+          error={formik.touched.width && Boolean(formik.errors.width)}
+          helperText={formik.touched.width && formik.errors.width}
+        />
+        <TextField
+          id="height"
+          label="Height"
+          variant="outlined"
+          value={formik.values.height}
+          onChange={formik.handleChange}
+          error={formik.touched.height && Boolean(formik.errors.height)}
+          helperText={formik.touched.height && formik.errors.height}
+        />
 
-      <Button type="submit">Add new box</Button>
+        <Button variant="contained" color="secondary" type="submit">Add new box</Button>
+      </BoxUI>
     </BoxUI>
   )
 }

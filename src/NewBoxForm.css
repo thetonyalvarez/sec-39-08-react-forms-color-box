@@ -1,0 +1,12 @@
+.ColorField {
+  /* width: 100%; */
+}
+
+.form-group {
+  justify-content: space-between;
+  display: flex;
+}
+
+.form-group > * {
+  width: 30%;
+}
